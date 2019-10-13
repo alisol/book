@@ -3,7 +3,7 @@ from PyQt5.QtWidgets import *
 import Kiwoom
 import time
 from pandas import DataFrame
-import datetime
+import datetime   # 책에는 이 구문이 없음
 
 MARKET_KOSPI   = 0
 MARKET_KOSDAQ  = 10
