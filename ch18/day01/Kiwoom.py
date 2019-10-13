@@ -96,6 +96,8 @@ class Kiwoom(QAxWidget):
             self.ohlcv['low'].append(int(low))
             self.ohlcv['close'].append(int(close))
             self.ohlcv['volume'].append(int(volume))
+            
+# 책에는 밑에 실행문이 없음
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
