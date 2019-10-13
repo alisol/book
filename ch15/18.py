@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import numpy as np # 이 코드를 왜 뺀 건지 모르겠음. 없어서 내가 넣음. 책참고해서 넣음 
 from matplotlib import font_manager, rc
 from matplotlib import style
 
