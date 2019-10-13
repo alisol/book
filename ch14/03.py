@@ -1,17 +1,20 @@
 import pandas_datareader.data as web
-import datetime
+# import datetime
+import fix_yahoo_finance as yf
 import matplotlib.pyplot as plt
 from zipline.api import order_target, record, symbol
 from zipline.algorithm import TradingAlgorithm
 
-start = datetime.datetime(2010, 1, 1)
-end = datetime.datetime(2016, 3, 29)
-data = web.DataReader("AAPL", "yahoo", start, end)
+yf.pdr_override()
+# start = datetime.datetime(2010, 1, 1)
+# end = datetime.datetime(2016, 3, 29)
+# data = web.DataReader("AAPL", "yahoo", start, end)
+data = web.get_data_yahoo("AAPL", start="2010-01-02", end="2019-01-01")
 
 #plt.plot(data.index, data['Adj Close'])
 #plt.show()
 
-data = data[['Adj Close']]
+data = data[['Adj Close']]   # 왜 여기는 Adj Close인가? 
 data.columns = ['AAPL']
 data = data.tz_localize('UTC')
 
