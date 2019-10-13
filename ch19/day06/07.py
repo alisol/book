@@ -21,5 +21,5 @@ soup = BeautifulSoup(html, "html5lib")
 dividend = soup.select("table:nth-of-type(2) tr:nth-of-type(33) td span")
 years = soup.select("table:nth-of-type(2) th")
 
-print(years)
+print(years) # print(years[3:7])  책과 다름. 책에는 3:7 로 되어있음.
 print(dividend)
